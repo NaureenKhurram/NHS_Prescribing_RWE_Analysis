@@ -271,3 +271,99 @@ def plot_stacked_bar(
     plt.tight_layout()
     plt.show()
 
+# defining a function to plot a pie chart
+
+def plot_pie_chart(
+            df, 
+            category_col,
+            value_col,
+            title, 
+            figsize=(8,8),
+            percentage = True):
+	
+   # creating figure object
+    fig, ax = plt.subplots(figsize=figsize)
+    
+    # creating the pie chart
+    ax.pie(
+            df[value_col],
+            labels=df[category_col],
+            autopct="%1.1f%%" if percentage else None,
+            startangle=90)
+
+    ax.set_title(title)
+    
+    plt.tight_layout()
+    plt.show()
+
+
+# function to plot line graph for multiple categoryes
+def plot_line_categories(
+            df, 
+            category_col,
+            value_col,
+            group_col,
+            title, 
+            ylabel,
+            xlabel,
+            isCurrency = False,
+            label_currency = "M",
+            figsize=(12,7),
+            marker="o",
+            rotation=0):
+
+    # creating plot 
+    fig, ax = plt.subplots(figsize=figsize)
+
+    # setting plot variables for each group
+
+    for group in df[group_col].unique():
+        data = df[df[group_col] == group]
+        
+        ax.plot(
+            data[category_col],
+            data[value_col],
+            marker=marker,
+            label=group
+        )
+
+    
+    # setting title and labels
+    ax.set_title(title)
+    ax.set_xlabel(xlabel)
+    ax.set_ylabel(ylabel)
+
+
+    # # set x axis labels
+    ax.xaxis.set_major_locator(mdates.MonthLocator())
+    ax.xaxis.set_major_formatter(mdates.DateFormatter("%b %Y"))
+
+    # set legend
+    ax.legend(title = group_col.replace("_"," ").upper(),
+             bbox_to_anchor=(1.05, 1),
+            loc="upper left")
+
+    
+     # set y axis labels
+    if (label_currency == "M"):
+
+            # checking if currency is true
+            if isCurrency:
+                ax.yaxis.set_major_formatter(FuncFormatter(lambda x, pos: f"£{x/1_000_000:.0f}M"))
+            else:
+                ax.yaxis.set_major_formatter(FuncFormatter(lambda x, pos: f"{x/1_000_000:.0f}M"))
+                
+    elif (label_currency == "B"):
+
+            # checking if currency is true
+            if isCurrency:
+                ax.yaxis.set_major_formatter(FuncFormatter(lambda x, pos: f"£{x/1_000_000_000:.0f}B"))
+            else:
+                ax.yaxis.set_major_formatter(FuncFormatter(lambda x, pos: f"{x/1_000_000_000:.0f}B"))
+
+    
+    # show x labels
+    plt.xticks(rotation=rotation)
+    
+    plt.tight_layout()
+    plt.show()
