@@ -33,7 +33,7 @@ Period analysed:
 - March 2026
 - April 2026
 
-Due to dataset size, the raw PCA files are not included in this repository. Processed summary tables and analysis outputs are provided instead.
+Due to the dataset size, the raw PCA files are not included in this repository. Processed summary tables and analysis outputs are provided instead.
 
 ---
 
@@ -85,9 +85,51 @@ The project includes:
 
 ---
 
+## Real-World Evidence (RWE) Questions
+
+The analysis explores the following Real-World Evidence questions using NHS Prescription Cost Analysis (PCA) data:
+
+### Research Question 1: Which products are the key drivers of NHS prescribing expenditure?
+
+**Objective:**  
+To identify the products contributing most significantly to NHS prescribing expenditure.
+
+**Analysis:**
+- Top 10 products by total Net Ingredient Cost (NIC).
+- Top 10 products by prescribing volume (items dispensed).
+
+**Key insight:**  
+High NHS prescribing expenditure was concentrated among a small number of products, including advanced therapies and medical technologies while routine medicines used for chronic disease management accounted for the highest prescribing volumes.
+
+---
+
+### Research Question 2: Which BNF chapters account for the greatest NHS prescribing expenditure?
+
+**Objective:**  
+To identify the BNF chapters contributing most significantly to NHS prescribing expenditure.
+
+**Analysis:**
+- Ranking of BNF chapters by total NIC.
+- Distribution of total prescribing expenditure across major BNF chapters.
+
+**Key insight:**  
+Prescribing expenditure was concentrated within a small number of therapeutic areas, with the Endocrine System, Central Nervous System, and Respiratory System representing major contributors to NHS prescribing costs.
+
+---
+
+### Research Question 3: How did monthly NHS prescribing expenditure vary across the highest-cost BNF chapters between January and April 2026?
+
+**Objective:**  
+- Monthly NHS prescribing expenditure trends (January–April 2026) across the highest-cost BNF chapters.
+**Analysis:**
+- Monthly prescribing expenditure trends across the top 5 highest-cost BNF chapters.
+
+**Key insight:**  
+Prescribing expenditure patterns remained relatively stable between January and April 2026, with the same major therapeutic areas consistently driving NHS prescribing expenditure.
+
 ## Future Work
 
-Future work includes extending the analysis with additional Real-World Evidence (RWE) questions investigating prescribing costs, prescribing trends, and variations across BNF chapters.
+Future work includes extending the analysis with additional Real-World Evidence (RWE) questions, investigating prescribing costs, prescribing trends, and variations across BNF chapters.
 
 Planned extensions include:
 
