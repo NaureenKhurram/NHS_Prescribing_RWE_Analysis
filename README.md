@@ -35,6 +35,8 @@ Period analysed:
 
 Due to the dataset size, the raw PCA files are not included in this repository. Processed summary tables and analysis outputs are provided instead.
 
+Note: Analyses and dashboard visualisations were generated using a cleaned NHS PCA dataset with "Exception Handler Unspecified Item" records removed, as these represent non-standard prescribing records and accounted for approximately 0.04% of the dataset.
+
 ---
 
 ## Project Structure
