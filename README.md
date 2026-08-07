@@ -60,6 +60,8 @@ NHS_Prescribing_RWE_Analysis/
 │
 ├── README.md
 └── requirements.txt
+|__ NHS_Prescription_dashboard.png
+
 ```
 
 ---
@@ -129,12 +131,35 @@ Prescribing expenditure was concentrated within a small number of therapeutic ar
 **Key insight:**  
 Prescribing expenditure patterns remained relatively stable between January and April 2026, with the same major therapeutic areas consistently driving NHS prescribing expenditure.
 
+## Dashboard
+Dashboard Screenshot
+
+<img width="2557" height="1338" alt="image" src="https://github.com/user-attachments/assets/d503e56c-bc95-470e-ae88-8d2b15a8fba8" />
+
+Live Tableau Dashboard link:
+https://public.tableau.com/app/profile/naureen.khurram/viz/NHSPrescriptionCostAnalysisDashboard/Dashboard
+
+## Key Features
+- Executive KPI summary
+- Top 10 products by Net Ingredient Cost (NIC)
+- Top 10 products by Items Dispensed
+- BNF Chapter Cost Distribution (%)
+- Monthly Cost and Items Dispensed Trends
+
+## Key Findings
+- Total NHS prescribing cost reached **£3.82B**.
+- Over **428M prescription items** were dispensed.
+- The Endocrine System accounted for the highest individual BNF chapter expenditure.
+- High-cost medicines such as FreeStyle Libre 2 Plus Sensor and Tirzepatide contributed significantly to overall prescribing costs.
+- Prescribing volume remained relatively stable, while expenditure varied month to month.
+
 ## Future Work
 
 Future work includes extending the analysis with additional Real-World Evidence (RWE) questions, investigating prescribing costs, prescribing trends, and variations across BNF chapters.
 
 Planned extensions include:
 
-* Developing an interactive Tableau dashboard to communicate key findings.
 * Incorporating additional PCA monthly data as it becomes available to support longer-term prescribing trend analysis.
-* Expanding the analysis to explore further prescribing patterns across therapeutic areas.
+* Extend analysis to multiple years.
+* Incorporate seasonal trends.
+* Explore prescribing variation by Integrated Care Board (ICB) and Regions
